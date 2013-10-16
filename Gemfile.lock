@@ -1,5 +1,7 @@
-PATH
-  remote: /home/blake/dev/work/tmx/audio_glue
+GIT
+  remote: git@github.com:TMXCredit/audio_glue.git
+  revision: 551b050202fd626a2f2b0655a3d81f3a2a95b9b3
+  branch: 12402_adapter_for_redis
   specs:
     audio_glue (0.0.1)
       ruby-sox
@@ -9,9 +11,13 @@ GEM
   specs:
     addressable (2.3.5)
     builder (3.2.2)
+    chromaprint (0.0.2)
+      ffi
+    coderay (1.0.9)
     diff-lcs (1.2.4)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    ffi (1.9.0)
     git (1.2.6)
     github_api (0.10.1)
       addressable
@@ -35,6 +41,7 @@ GEM
     json (1.8.0)
     jwt (0.1.8)
       multi_json (>= 1.5)
+    method_source (0.8.2)
     multi_json (1.8.2)
     multi_xml (0.5.5)
     multipart-post (1.2.0)
@@ -46,6 +53,10 @@ GEM
       multi_json (~> 1.0)
       multi_xml (~> 0.5)
       rack (~> 1.2)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     rack (1.5.2)
     rake (10.1.0)
     rdoc (4.0.1)
@@ -63,6 +74,7 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
+    slop (3.4.6)
     yard (0.8.7.2)
 
 PLATFORMS
@@ -71,7 +83,9 @@ PLATFORMS
 DEPENDENCIES
   audio_glue!
   bundler (~> 1.0)
+  chromaprint
   jeweler (~> 1.8.7)
+  pry
   rspec (~> 2.14.0)
   ruby-sox
   simplecov
