@@ -1,10 +1,9 @@
 GIT
   remote: git@github.com:TMXCredit/audio_glue.git
-  revision: 551b050202fd626a2f2b0655a3d81f3a2a95b9b3
+  revision: 322a56d2c00a80aebac0d8e9047d9445dff93c63
   branch: 12402_adapter_for_redis
   specs:
     audio_glue (0.0.1)
-      ruby-sox
 
 GEM
   remote: http://rubygems.org/
