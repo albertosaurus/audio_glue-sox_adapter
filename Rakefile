@@ -15,15 +15,14 @@ require 'rake'
 require 'jeweler'
 
 Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "audio_glue-sox_adapter"
-  gem.homepage = "http://github.com/greyblake/audio_glue-sox_adapter"
-  gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "blake131313@gmail.com"
-  gem.authors = ["Potapov Sergey"]
-  # dependencies defined in Gemfile
+  gem.name        = "audio_glue-sox_adapter"
+  gem.homepage    = "http://github.com/TMXCredit/audio_glue-sox_adapter"
+  gem.license     = "MIT"
+  gem.summary     = "AudioGlue adapter based on sox command line tool"
+  gem.description = gem.summary
+  gem.authors     = ['TMX Credit'            , 'Potapov Sergey']
+  gem.email       = ['rubygems@tmxcredit.com', 'blake131313@gmail.com']
+  gem.files       = Dir["lib/**/*"] + Dir['README.markdown', 'LICENSE.txt']
 end
 
 require 'rspec/core'
