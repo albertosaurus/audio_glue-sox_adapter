@@ -29,7 +29,7 @@ For now the adapter supports only `:file` snippet types.
 
 Usage example:
 
-```
+```ruby
 adapter = AudioGlue::SoxAdapter.new
 builder = AudioGlue::Builder.new(adapter)
 
