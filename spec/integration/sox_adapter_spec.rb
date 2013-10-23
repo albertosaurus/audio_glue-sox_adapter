@@ -12,7 +12,7 @@ describe 'Integration: AudioGlue::SoxAdapter' do
 
   def add_file_snippet(file_name)
     file_path = fixture("input/#{file_name}")
-    snippet = AudioGlue::Snippet.new(:file, file_path, packet)
+    snippet   = AudioGlue::Snippet.new(:file, file_path, packet)
     packet.snippets << snippet
   end
 

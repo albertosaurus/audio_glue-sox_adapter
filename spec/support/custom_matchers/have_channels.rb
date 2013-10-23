@@ -18,7 +18,7 @@ RSpec::Matchers.define :have_channels do |expected_channels|
   end
 
   failure_message_for_should_not do
-    "expected #{@file_path} to not have channels #{expected_channels}"
+    "expected #{@file_path} not to have channels #{expected_channels}"
   end
 
   description do

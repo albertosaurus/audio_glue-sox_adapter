@@ -13,9 +13,12 @@ describe AudioGlue::SoxAdapter do
     end
 
     it 'should raise AudioGlue::BuildError if snippet is not supported' do
-      snippet_packet.snippets << AudioGlue::Snippet.new(:yo, 'Source', snippet_packet)
+      snippet_packet.snippets <<
+        AudioGlue::Snippet.new(:yo, 'Source', snippet_packet)
+
       expect { adapter.build(snippet_packet) }.
-        to raise_error(::AudioGlue::BuildError, "SoxAdapter doesn't support snippet type :yo")
+        to raise_error( ::AudioGlue::BuildError,
+                        "SoxAdapter doesn't support snippet type :yo" )
     end
   end
 end

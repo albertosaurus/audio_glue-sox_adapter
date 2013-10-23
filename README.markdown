@@ -1,6 +1,6 @@
 # AudioGlue sox based adapter
 
-[AudioGlue](https://github.com/TMXCredit/audio_glue/) adapter based on
+An [AudioGlue](https://github.com/TMXCredit/audio_glue/) adapter based on the
 [sox](http://sox.sourceforge.net) command line tool.
 
 
@@ -11,16 +11,16 @@
 ### Debian / Ubuntu
 
 ```bash
-apt-get install sox
+  apt-get install sox
 ```
 
 ### Mac
 
 ```bash
-# Note: flac must be installed before sox so it will link during compilation.
-# One of the following:
-sudo port install flac sox
-brew install flac sox
+  # Note: flac must be installed before sox so it will link during compilation.
+  # One of the following:
+  sudo port install flac sox
+  brew install flac sox
 ```
 
 ## Usage
@@ -30,11 +30,11 @@ For now the adapter supports only `:file` snippet types.
 Usage example:
 
 ```ruby
-adapter = AudioGlue::SoxAdapter.new
-builder = AudioGlue::Builder.new(adapter)
+  adapter = AudioGlue::SoxAdapter.new
+  builder = AudioGlue::Builder.new(adapter)
 
-# Build binary audio using instance of AudioGlue::Template
-builder.build(template)
+  # Build binary audio using an instance of AudioGlue::Template:
+  builder.build(template)
 ```
 
 

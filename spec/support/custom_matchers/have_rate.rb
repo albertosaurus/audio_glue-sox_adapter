@@ -19,7 +19,7 @@ RSpec::Matchers.define :have_rate do |expected_rate|
   end
 
   failure_message_for_should_not do
-    "expected #{@file_path} to not have rate #{expected_rate}"
+    "expected #{@file_path} not to have rate #{expected_rate}"
   end
 
   description do
