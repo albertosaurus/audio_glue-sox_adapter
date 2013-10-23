@@ -1,4 +1,4 @@
-# rcov generated
+# SimpleCov generated
 coverage
 coverage.data
 
@@ -27,8 +27,7 @@ pkg
 # Not sure what to needs to be ignored for particular editors/OSes? Here's some ideas to get you started. (Remember, remove the leading # of the line)
 #
 # For MacOS:
-#
-#.DS_Store
+.DS_Store
 
 # For TextMate
 #*.tmproj
@@ -47,3 +46,12 @@ pkg
 
 # For rubinius:
 #*.rbc
+
+# exclude everything in tmp
+tmp/*
+# except the metric_fu directory
+!tmp/metric_fu/
+# but exclude everything *in* the metric_fu directory
+tmp/metric_fu/*
+# except for the _data directory to track metrical outputs
+!tmp/metric_fu/_data/
