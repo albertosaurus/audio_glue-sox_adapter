@@ -3,10 +3,10 @@ require 'sox'
 
 # :nodoc:
 module AudioGlue
-  # Pretty small adapter which is based on the +ruby-sox+ library and handles
-  # only local files (snippet type = :file).
+  # Pretty small adapter based on the +ruby-sox+ library. Handles
+  # only local files ( +snippet type = :file+ ).
   class SoxAdapter < AudioGlue::BaseAdapter
-    # Write output to temporary file and read data from it and remove it.
+    # Write output to a temporary file, read data from it, and remove it.
     #
     # @param snippet_packet [AudioGlue::SnippetPacket]
     #
@@ -22,7 +22,7 @@ module AudioGlue
     end
 
 
-    # Build an output file using the snippet packet and write it to a file.
+    # Build an output file using the snippet packet, and write it to a file.
     #
     # @param output_file [String] path to a file
     # @param snippet_packet [AudioGlue::SnippetPacket]
@@ -30,22 +30,24 @@ module AudioGlue
     # @return [void]
     def write(snippet_packet, output_file)
       input_files = snippet_packet.snippets.map do |snippet|
-        if snippet.type != :file
-          msg = "SoxAdapter doesn't support snippet type #{snippet.type.inspect}"
+        snippet_type = snippet.type
+        if snippet_type != :file
+          msg = "SoxAdapter doesn't support snippet type " \
+                "#{snippet_type.inspect}"
           raise(::AudioGlue::BuildError, msg)
         end
         snippet.source
       end
 
-      combiner    = Sox::Combiner.new( input_files,
-                                       :combine  => :concatenate,
-                                       :rate     => snippet_packet.rate,
-                                       :channels => snippet_packet.channels )
+      combiner = Sox::Combiner.new(input_files,
+                                   :combine  => :concatenate,
+                                   :rate     => snippet_packet.rate,
+                                   :channels => snippet_packet.channels)
       combiner.write(output_file)
     end
     private :write
 
-    # Generate a unique name for a temporary file.
+    # Generate a unique name for the temporary file.
     #
     # @param ext [String] extension of a file
     #
