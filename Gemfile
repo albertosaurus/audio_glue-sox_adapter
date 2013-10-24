@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'audio_glue', :git => 'git@github.com:TMXCredit/audio_glue.git', :branch => '12402_adapter_for_redis'
+gem 'audio_glue', '~> 0.1.0'
 gem 'ruby-sox'
 
 group :development do
