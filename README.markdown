@@ -1,5 +1,7 @@
 # AudioGlue sox based adapter
 
+[![Build Status](https://travis-ci.org/TMXCredit/audio_glue-sox_adapter.png?branch=master)](https://travis-ci.org/TMXCredit/audio_glue-sox_adapter)
+
 An [AudioGlue](https://github.com/TMXCredit/audio_glue/) adapter based on the
 [sox](http://sox.sourceforge.net) command line tool.
 
